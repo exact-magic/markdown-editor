@@ -18,7 +18,6 @@ module.exports = {
       {
         successComment: false,
         failComment: false,
-        assets: ["package.json", "README.md", "dist/**"],
       },
     ],
   ],
