@@ -13,6 +13,13 @@ module.exports = {
       },
     ],
     "@semantic-release/npm",
-    "@semantic-release/github",
+    [
+      "@semantic-release/github",
+      {
+        successComment: false,
+        failComment: false,
+        assets: ["package.json", "README.md", "dist/**"],
+      },
+    ],
   ],
 };
