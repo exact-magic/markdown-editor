@@ -821,3 +821,5 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
 }
 
 export default RichMarkdownEditor;
+
+export { default as Node } from "./nodes/Node";
