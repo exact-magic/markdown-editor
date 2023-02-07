@@ -34,7 +34,7 @@ export default class Folding extends Extension {
 
           for (const block of blocks) {
             if (block.node.type.name === "heading") {
-              const persistKey = headingToPersistenceKey(
+              /*const persistKey = headingToPersistenceKey(
                 block.node,
                 this.editor.props.id
               );
@@ -46,7 +46,7 @@ export default class Folding extends Extension {
                   collapsed: true,
                 });
                 modified = true;
-              }
+              }*/
             }
           }
 
