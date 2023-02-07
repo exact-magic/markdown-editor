@@ -81,6 +81,9 @@ import { PluginSimple } from "markdown-it";
 export { schema, parser, serializer, renderToHtml } from "./server";
 
 export { default as Extension } from "./lib/Extension";
+export { Plugin } from "prosemirror-state";
+export { default as Node } from "./nodes/Node";
+export { Decoration, DecorationSet } from "prosemirror-view";
 
 export const theme = lightTheme;
 
@@ -821,5 +824,3 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
 }
 
 export default RichMarkdownEditor;
-
-export { default as Node } from "./nodes/Node";
