@@ -17,7 +17,6 @@
     ],
     "rootDir": "src",
     "outDir": "dist",
-    "stripInternal": true,
     "removeComments": true,
     "declarationMap": true,
     "declaration": true,

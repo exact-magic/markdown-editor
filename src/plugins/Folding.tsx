@@ -3,7 +3,6 @@ import { Decoration, DecorationSet } from "prosemirror-view";
 import Extension from "../lib/Extension";
 import { findBlockNodes } from "prosemirror-utils";
 import findCollapsedNodes from "../queries/findCollapsedNodes";
-import { headingToPersistenceKey } from "../lib/headingToSlug";
 
 export default class Folding extends Extension {
   get name() {
@@ -28,13 +27,13 @@ export default class Folding extends Extension {
             return;
           }
 
-          let modified = false;
+          const modified = false;
           const tr = newState.tr;
           const blocks = findBlockNodes(newState.doc);
 
           for (const block of blocks) {
             if (block.node.type.name === "heading") {
-              const persistKey = headingToPersistenceKey(
+              /*const persistKey = headingToPersistenceKey(
                 block.node,
                 this.editor.props.id
               );
@@ -46,7 +45,7 @@ export default class Folding extends Extension {
                   collapsed: true,
                 });
                 modified = true;
-              }
+              }*/
             }
           }
 

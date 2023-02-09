@@ -81,6 +81,14 @@ import { PluginSimple } from "markdown-it";
 export { schema, parser, serializer, renderToHtml } from "./server";
 
 export { default as Extension } from "./lib/Extension";
+export {
+  Plugin,
+  Selection,
+  TextSelection,
+  NodeSelection,
+} from "prosemirror-state";
+export { default as Node } from "./nodes/Node";
+export { Decoration, DecorationSet } from "prosemirror-view";
 
 export const theme = lightTheme;
 
