@@ -145,7 +145,7 @@ export type Props = {
   uploadImage?: (file: File) => Promise<string>;
   onBlur?: () => void;
   onFocus?: () => void;
-  onSave?: ({ done: boolean }) => void;
+  onSave?: (params: { done: boolean }) => void;
   onCancel?: () => void;
   onChange?: (value: () => string) => void;
   onImageUploadStart?: () => void;
@@ -305,7 +305,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
     this.plugins = this.createPlugins();
     this.rulePlugins = this.createRulePlugins();
     this.keymaps = this.createKeymaps();
-    this.serializer = this.createSerializer();
+    this.serializer = this.createSerializer() as any;
     this.parser = this.createParser();
     this.pasteParser = this.createPasteParser();
     this.inputRules = this.createInputRules();

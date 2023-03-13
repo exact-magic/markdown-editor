@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "strict": false,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "noImplicitAny": false,
     "esModuleInterop": true,
     "allowJs": true,
@@ -11,21 +11,20 @@
     "target": "es2017",
     "lib": ["dom", "es2018"],
     "jsx": "react",
-    "types": [
-      "react",
-      "jest"
-    ],
+    "types": ["react", "jest"],
     "rootDir": "src",
     "outDir": "dist",
     "removeComments": true,
     "declarationMap": true,
-    "declaration": true,
+    "declaration": true
   },
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
   "exclude": [
     "dist",
-    "node_modules"
+    "node_modules",
+    ".storybook",
+    ".husky",
+    ".github",
+    ".circleci"
   ]
 }
